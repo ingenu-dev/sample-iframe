@@ -1,0 +1,11 @@
+{
+  "name": "sample-iframe",
+  "version": "1.0.0",
+  "description": "Sample IFrame to test out IFrame messaging.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ingenu",
+  "license": "ISC"
+}
