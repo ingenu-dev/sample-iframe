@@ -4,7 +4,7 @@
   var clickableContent = window.document.getElementById('clickableContent');
 
   function postMessage(message) {
-    window.parent.postMessage('message', message);
+    window.parent.postMessage('message', 'http://localhost:3006',message);
   }
 
   clickableContent.addEventListener('click', function() {
