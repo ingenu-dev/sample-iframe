@@ -5,5 +5,5 @@ app.get('/*', function(req, res){
   res.sendFile('index.html', {root: __dirname});
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 console.log('running...');
