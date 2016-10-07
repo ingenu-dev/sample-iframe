@@ -13,6 +13,6 @@
   });
 
   postMessage({type: 'ls.event.onload'});
-  postMessage({type: 'ls.event.height', clickableContent.offsetHeight});
+  postMessage({type: 'ls.event.height', data: { height: clickableContent.offsetHeight });
 
 })(window);
