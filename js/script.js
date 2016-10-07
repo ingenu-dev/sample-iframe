@@ -12,7 +12,7 @@
     console.log('Sent message from iframe.');
   });
 
-  postMessage({type: 'ls.event.onload'});
-  postMessage({type: 'ls.event.height', data: { height: clickableContent.offsetHeight }});
+  postMessage({namespace: 'ls.event.onload'});
+  postMessage({namespace: 'ls.event.height', data: { height: clickableContent.offsetHeight }});
 
 })(window);
