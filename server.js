@@ -8,7 +8,9 @@ app.use('/js', express.static(`${__dirname}/js`));
 
 _(['short', 'medium', 'long']).forEach(length =>
   app.get(`/${length}`, (req, res) => {
-    res.sendFile(`/pages/frame-${length}.html`, {root: __dirname});
+    setTimeout(() =>
+      res.sendFile(`/pages/frame-${length}.html`, {root: __dirname})
+        , req.query && req.query.timeout ? req.query.timeout : 0)
   })
 );
 
