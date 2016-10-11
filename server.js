@@ -17,8 +17,8 @@ _(['short', 'medium', 'long']).forEach(length =>
 app.get('/invoices', (req, res) => {
   console.log(req.params.period);
   setTimeout(() =>
-    res.sendFile(`/pages/frame-${length}.html`, {root: __dirname})
-      , req.query && req.query.timeout ? req.query.timeout : 0);
+    res.sendFile(`/pages/frame-invoices.html`, {root: __dirname})
+      , req.query && req.query.timeout ? req.query.timeout : 0)
 });
 
 app.listen(process.env.PORT || 5000);
