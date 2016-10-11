@@ -14,9 +14,9 @@ _(['short', 'medium', 'long']).forEach(length =>
   })
 );
 
-app.get('/timeout/:period*?', (req, res) => {
+app.get('/invoices', (req, res) => {
   console.log(req.params.period);
-  setTimeout(() => res.sendFile(`/pages/frame-medium.html`, {root: __dirname}), req.params.period || 5000);
+  setTimeout(() => res.sendFile(`/pages/frame-invoices.html`, {root: __dirname}), req.params.period || 5000);
 });
 
 app.listen(process.env.PORT || 5000);
