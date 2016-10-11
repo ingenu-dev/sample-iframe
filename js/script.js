@@ -5,6 +5,10 @@
   var contentHeight = clickableContent.offsetHeight;
   window.document.getElementById('contentHeight').textContent = contentHeight + 'px';
 
+  var MessageCtrl = window.MessageCtrl = {
+    postMessage: postMessage
+  };
+
   function postMessage(message) {
     window.parent.postMessage(message, 'http://localhost:3006');
   }
