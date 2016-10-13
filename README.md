@@ -1,4 +1,4 @@
-# Messaging Samples for iframe integration
+# Messaging Samples for Iframe Integration
 
 The contents of this repository can be found at http://sample-iframe.herokuapp.com/.
 
