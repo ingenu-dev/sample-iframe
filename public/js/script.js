@@ -6,11 +6,22 @@
   window.document.getElementById('contentHeight').textContent = contentHeight + 'px';
 
   var MessageCtrl = window.MessageCtrl = {
-    postMessage: postMessage
+    postMessage: postMessage,
+    notify: notify
   };
 
   function postMessage(message) {
     window.parent.postMessage(message, 'http://localhost:3006');
+  }
+
+  function notify(id, message) {
+    postMessage({
+      namespace: 'ls.event.notification',
+      data: {
+        id: id,
+        message: message
+      }
+    });
   }
 
   postMessage({namespace: 'ls.event.onload'});
