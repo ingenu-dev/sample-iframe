@@ -11,7 +11,7 @@
   };
 
   function postMessage(message) {
-    window.parent.postMessage(message, 'http://localhost:3006');
+    window.parent.postMessage(message, '*');
   }
 
   function notify(id, message) {
