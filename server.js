@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const _ = require('lodash');
 
-app.use('/js', express.static(`${__dirname}/js`));
+app.use('/public', express.static(`${__dirname}/public`));
 
 _(['short', 'medium', 'long']).forEach(length =>
   app.get(`/${length}`, (req, res) => {
